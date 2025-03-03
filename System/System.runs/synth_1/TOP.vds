@@ -1,0 +1,480 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  3 20:31:30 2025
+# Process ID: 7304
+# Current directory: F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.runs/synth_1/TOP.vds
+# Journal file: F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xc7s6ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3248 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 430.461 ; gain = 98.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/TOP.v:23]
+INFO: [Synth 8-6157] synthesizing module 'key_debounce' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/key_debounce.v:23]
+	Parameter DELAY_CNT bound to: 1000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'key_debounce' (1#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/key_debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'counter' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (2#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/seg.v:23]
+	Parameter CNT_WAIT_MAX bound to: 25'b0000000000000001111100111 
+	Parameter SEG_0 bound to: 8'b11000000 
+	Parameter SEG_1 bound to: 8'b11111001 
+	Parameter SEG_2 bound to: 8'b10100100 
+	Parameter SEG_3 bound to: 8'b10110000 
+	Parameter SEG_4 bound to: 8'b10011001 
+	Parameter SEG_5 bound to: 8'b10010010 
+	Parameter SEG_6 bound to: 8'b10000010 
+	Parameter SEG_7 bound to: 8'b11111000 
+	Parameter SEG_8 bound to: 8'b10000000 
+	Parameter SEG_9 bound to: 8'b10010000 
+	Parameter SEG_A bound to: 8'b10001000 
+	Parameter SEG_B bound to: 8'b10000011 
+	Parameter SEG_C bound to: 8'b11000110 
+	Parameter SEG_D bound to: 8'b10100001 
+	Parameter SEG_E bound to: 8'b10000110 
+	Parameter SEG_F bound to: 8'b10001110 
+	Parameter SEG_X bound to: 8'b10111111 
+	Parameter IDLE bound to: 8'b11111111 
+	Parameter SEG_C7 bound to: 8'b00000001 
+	Parameter SEG_C6 bound to: 8'b00000010 
+	Parameter SEG_C5 bound to: 8'b00000100 
+	Parameter SEG_C4 bound to: 8'b00001000 
+	Parameter SEG_C3 bound to: 8'b00010000 
+	Parameter SEG_C2 bound to: 8'b00100000 
+	Parameter SEG_C1 bound to: 8'b01000000 
+	Parameter SEG_C0 bound to: 8'b10000000 
+INFO: [Synth 8-226] default block is never used [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/seg.v:100]
+WARNING: [Synth 8-5788] Register cnt_reg in module seg is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/seg.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'seg' (3#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/seg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_char_tx' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/uart_char_tx.v:23]
+	Parameter IDLE bound to: 4'b0000 
+	Parameter SEND bound to: 4'b0001 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/uart_tx.v:24]
+	Parameter MAX_BPS bound to: 9600 - type: integer 
+	Parameter CLOCK bound to: 50000000 - type: integer 
+	Parameter MAX_1bit bound to: 5208 - type: integer 
+	Parameter CHECK_BIT bound to: None - type: string 
+	Parameter IDLE bound to: 1 - type: integer 
+	Parameter START bound to: 2 - type: integer 
+	Parameter DATA bound to: 4 - type: integer 
+	Parameter CHECK bound to: 8 - type: integer 
+	Parameter STOP bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (4#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/uart_tx.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'uart_char_tx' (5#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/uart_char_tx.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TOP' (6#1) [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/sources_1/new/TOP.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 486.535 ; gain = 154.258
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 486.535 ; gain = 154.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 486.535 ; gain = 154.258
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s6ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/constrs_1/new/sm.xdc]
+Finished Parsing XDC File [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/constrs_1/new/sm.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.srcs/constrs_1/new/sm.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.059 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 782.059 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 782.059 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 782.059 ; gain = 449.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s6ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 782.059 ; gain = 449.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 782.059 ; gain = 449.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "key_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'c_status_reg' in module 'seg'
+INFO: [Synth 8-5545] ROM "cnt_data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "seg_a0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_status" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'uart_tx'
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bit_max" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_char_tx'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+                 iSTATE5 |                              110 |                              110
+                 iSTATE6 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'c_status_reg' using encoding 'sequential' in module 'seg'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                            00001 |                            00001
+                   START |                            00010 |                            00010
+                    DATA |                            00100 |                            00100
+                   CHECK |                            01000 |                            01000
+                    STOP |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cstate_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                             0000
+                    SEND |                                1 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_char_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 782.059 ; gain = 449.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module TOP 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module key_debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module seg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module uart_char_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 10 (col length:20)
+BRAMs: 10 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "uart/uart_tx_inst/bit_max" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_key_debounce_0/key_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_key_debounce_1/key_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_key_debounce_2/key_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "u_key_debounce_3/key_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "segdisplay/cnt_data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segdisplay/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart/uart_tx_inst/tx_data_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\segdisplay/seg_data_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 782.059 ; gain = 449.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 783.773 ; gain = 451.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 784.145 ; gain = 451.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    37|
+|3     |LUT1   |     1|
+|4     |LUT2   |   109|
+|5     |LUT3   |   131|
+|6     |LUT4   |    42|
+|7     |LUT5   |    53|
+|8     |LUT6   |    83|
+|9     |FDCE   |   166|
+|10    |FDPE   |    24|
+|11    |FDRE   |     1|
+|12    |IBUF   |     6|
+|13    |OBUF   |    18|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------+------+
+|      |Instance           |Module         |Cells |
++------+-------------------+---------------+------+
+|1     |top                |               |   672|
+|2     |  count_ctrl       |counter        |   105|
+|3     |  segdisplay       |seg            |   127|
+|4     |  u_key_debounce_0 |key_debounce   |    78|
+|5     |  u_key_debounce_1 |key_debounce_0 |    78|
+|6     |  u_key_debounce_2 |key_debounce_1 |    78|
+|7     |  u_key_debounce_3 |key_debounce_2 |    77|
+|8     |  uart             |uart_char_tx   |   104|
+|9     |    uart_tx_inst   |uart_tx        |    97|
++------+-------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 823.453 ; gain = 195.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 823.453 ; gain = 491.176
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 823.453 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 823.453 ; gain = 504.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 823.453 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'F:/Dream/FPGA/Lanqiao_test/Lanqiao_FPGA_test/System/System.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 20:32:04 2025...

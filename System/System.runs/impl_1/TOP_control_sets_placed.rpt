@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Mar  3 20:32:39 2025
+| Host         : DESKTOP-KR70RL7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
+| Design       : TOP
+| Device       : xc7s6
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    73 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            5 |
+|      4 |            1 |
+|      5 |            1 |
+|      7 |            1 |
+|     10 |            1 |
+|     13 |            1 |
+|     15 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |              52 |           19 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             138 |           49 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------+------------------+------------------+----------------+
+|  Clock Signal  |               Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                          |                  |                1 |              1 |
+|  clk_IBUF_BUFG | u_key_debounce_3/key_flag                | rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG | u_key_debounce_0/key_flag                | rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG | u_key_debounce_1/key_flag                | rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG | u_key_debounce_2/key_flag                | rst_IBUF         |                1 |              1 |
+|  clk_IBUF_BUFG | uart/uart_tx_inst/E[0]                   | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG | uart/uart_tx_inst/cstate[4]_i_1_n_0      | rst_IBUF         |                3 |              5 |
+|  clk_IBUF_BUFG | uart/uart_tx_inst/tx_data_vld            | rst_IBUF         |                5 |              7 |
+|  clk_IBUF_BUFG | u_key_debounce_1/E[0]                    | rst_IBUF         |                6 |             10 |
+|  clk_IBUF_BUFG | uart/uart_tx_inst/cnt_baud[0]_i_1_n_0    | rst_IBUF         |                4 |             13 |
+|  clk_IBUF_BUFG | segdisplay/cnt_reg_n_0                   | rst_IBUF         |                5 |             15 |
+|  clk_IBUF_BUFG | u_key_debounce_0/delay_cnt[0]_i_1_n_0    | rst_IBUF         |                5 |             20 |
+|  clk_IBUF_BUFG | u_key_debounce_1/delay_cnt[0]_i_1__0_n_0 | rst_IBUF         |                5 |             20 |
+|  clk_IBUF_BUFG | u_key_debounce_2/delay_cnt[0]_i_1__1_n_0 | rst_IBUF         |                5 |             20 |
+|  clk_IBUF_BUFG | u_key_debounce_3/delay_cnt[0]_i_1__2_n_0 | rst_IBUF         |                5 |             20 |
+|  clk_IBUF_BUFG |                                          | rst_IBUF         |               19 |             52 |
++----------------+------------------------------------------+------------------+------------------+----------------+
+
+
